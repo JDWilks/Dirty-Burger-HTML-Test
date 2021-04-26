@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+}
+
+/* /// header styling/// */
+
+.bgimage {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(assets/images/pexels-horizon-content-3826273.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: grid;
+  grid-auto-flow: column;
+
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+img.logo {
+  position: sticky;
+  top: 0;
+
+  width: 30vw;
+  justify-self: flex-end;
+}
+
+/* ///// drop down menu//// */
+
+.dropbtn {
+  background-color: #ffffff;
+  color: rgb(255, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: "Julius Sans One", sans-serif;
+  /* margin-left: 30px; */
+  position: relative;
+  left: 10px;
+
+  position: sticky;
+  top: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* min-width: 160px; */
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Julius Sans One", sans-serif;
+  position: relative;
+  left: 10px;
+  top: 2px;
+}
+
+.dropdown-content a:hover {
+  color: red;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ////// main styling //// */
+
+/* white banner */
+
+.burger-info {
+  height: 60vh;
+  display: grid;
+  place-items: center;
+}
+
+.burger-info h1 {
+  font-size: 4vw;
+  font-family: "Julius Sans One", sans-serif;
+  padding-top: 20px;
+  letter-spacing: 0.2rem;
+}
+
+.burger-info h2 {
+  font-size: 3vw;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+.burger-info h3 {
+  font-size: 3vw;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+.burger-image {
+  width: 50px;
+}
+
+.burger-image:hover {
+  fill: red;
+}
+
+.image-section1 {
+  height: 70vh;
+  background-image: url(assets/images/pexels-jonathan-borba-2983098.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ////menu styliing//// */
+
+.menu {
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  padding-top: 50px;
+}
+
+.image-section2 {
+  height: 70vh;
+  background-image: url(assets/images/pexels-valeria-boltneva-1893557.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.card1-beef,
+.card2-chicken,
+.card3-sides {
+  width: 30vw;
+  height: fit-content;
+  border: 1px solid white;
+  padding: 20px;
+  background-color: white;
+  color: red;
+  border-radius: 20px;
+  justify-self: center;
+  line-height: 2;
+  display: grid;
+  grid-template:
+    "foodtitle price" 1fr
+    "foodtitle price" 1fr/
+    2fr 1fr;
+}
+
+.foodtitle {
+  grid-area: foodtitle;
+}
+
+.price {
+  grid-area: price;
+  text-align: end;
+}
+
+p {
+  color: grey;
+}
+
+/* /////media quiery///// */
+
+@media screen and (max-width: 790px) {
+  .menu {
+    grid-template-columns: auto;
+    grid-gap: 10px;
+  }
+}
