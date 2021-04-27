@@ -152,7 +152,8 @@ img.logo {
 
 .card1-beef,
 .card2-chicken,
-.card3-sides {
+.card3-sides,
+.card4-drinks {
   width: 30vw;
   height: fit-content;
   border: 1px solid white;
@@ -161,16 +162,23 @@ img.logo {
   color: red;
   border-radius: 20px;
   justify-self: center;
-  line-height: 2;
-  display: grid;
-  grid-template:
-    "foodtitle price" 1fr
-    "foodtitle price" 1fr/
-    2fr 1fr;
 }
 
-.foodtitle {
-  grid-area: foodtitle;
+.card-title {
+  font-size: 3vw;
+}
+
+.foodinfo {
+  display: grid;
+  grid-template:
+    "foodtitle price checkbox" 1fr
+    "food-description food-description food-description" 1fr/
+    2fr 1fr 1fr;
+  line-height: 1.5;
+}
+
+.food-description {
+  grid-area: food-description;
 }
 
 .price {
@@ -178,8 +186,28 @@ img.logo {
   text-align: end;
 }
 
-p {
+.checkbox-food {
+  align-self: center;
+  justify-self: end;
+}
+
+.food-description {
   color: grey;
+}
+
+.order {
+  background-color: #ffffff;
+  color: rgb(255, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+.order:hover {
+  color: black;
 }
 
 /* /////media quiery///// */
@@ -187,6 +215,6 @@ p {
 @media screen and (max-width: 790px) {
   .menu {
     grid-template-columns: auto;
-    grid-gap: 10px;
+    grid-gap: 20px;
   }
 }
