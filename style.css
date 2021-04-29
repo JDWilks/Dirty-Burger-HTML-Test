@@ -50,9 +50,9 @@ img.logo {
   /* margin-left: 30px; */
   position: relative;
   left: 10px;
-
+  transition: 1s;
   position: sticky;
-  top: 0;
+  top: 10px;
 }
 
 .dropdown {
@@ -120,6 +120,7 @@ img.logo {
 
 .burger-image:hover {
   fill: red;
+  transform: rotate(360deg);
 }
 
 .image-section1 {
@@ -195,6 +196,8 @@ img.logo {
 
 .food-description {
   color: grey;
+  font-size: 1vw;
+  /* max-width: 30ch; */
 }
 
 .order {
@@ -212,6 +215,10 @@ img.logo {
   color: black;
 }
 
+.order-button {
+  place-self: end;
+  padding: 20px;
+}
 /* /////media quiery///// */
 
 @media screen and (max-width: 790px) {
